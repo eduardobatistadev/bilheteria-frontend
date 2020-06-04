@@ -24,7 +24,7 @@
                 <tr *ngFor="let tempEventos of evento">
                     <td>{{tempEventos.idevento}}</td>
                     <td>{{tempEventos.nome}}</td>
-                    <td>{{tempEventos.casaDeShow}}</td>
+                    <td>{{tempEventos.casadeshow.nome}}</td>
                     <td>{{tempEventos.descricao}}</td>
                     <td>{{tempEventos.ingressos}}</td>
                     <td>{{tempEventos.dt_inicio}}</td>
@@ -33,10 +33,10 @@
                     
 
                     <td colspan="2">
-                        <a class="btn btn-info btn-sm"  role="button">
+                        <a [routerLink]="['/eventos/update/', tempEventos.idevento]" class="btn btn-info btn-sm"  role="button">
                             <span class="oi oi-brush" title="Editar" aria-hidden="true">Update</span>
                         </a>
-                        <button type="button" class="btn btn-danger btn-sm ml-2"
+                        <button [routerLink]="['/eventos/delete/', tempEventos.idevento]" type="button" class="btn btn-danger btn-sm ml-2"
                                 data-toggle="modal" data-target="#myModal">
                             <span class="oi oi-circle-x" title="Excluir" aria-hidden="true">Delete</span>
                         </button>

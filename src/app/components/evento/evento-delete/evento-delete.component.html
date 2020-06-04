@@ -1,1 +1,111 @@
-<p>evento-delete works!</p>
+<section class="layout-content">
+	
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <i class="oi oi-caret-right"></i>
+                    <span>Confirmar Exclusão de deste Evento</span>
+                </li>
+            </ul>
+            <a class="btn btn-primary btn-md" role="button">
+                <span class="oi oi-spreadsheet" title="Listar" aria-hidden="true"></span>
+                <span routerLink="/eventos">Listar Eventos</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container" id="cadastro">
+    
+    
+        <form>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome do Evento</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Evento"
+                           autofocus="autofocus"
+                           [value]="evento.nome" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                
+                   <div class="form-group col-md-6">
+                    <label for="nome">Descrição</label>
+                    <input type="text" class="form-control" name="descricao" placeholder="descrição"
+                           autofocus="autofocus"
+                           [value]="evento.descricao" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dataEntrada">Data início</label>
+                    <input type="date" class="form-control" name="dt_inicio"
+                    [value]="evento.dt_inicio" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="dataSaida">Data final</label>
+                    <input type="date" class="form-control" name="dt_fim"
+                    [value]="evento.dt_fim" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="evento">Casa de Show</label>
+                    <select [value]="evento.casadeshow.idcasashow" name="idc" id="evento" class="form-control">
+                        <option *ngFor="let tempCasaShow of evento" [value]="tempCasaShow.casadeshow.idcasashow">
+                            {{tempCasaShow.casadeshow.nome}}
+                        </option>
+                    </select>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="numero">Quantidade de Ingressos</label>
+                    <input type="number" class="form-control" name="ingressos"
+                    [value]="evento.ingressos" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+                
+                
+                   <div class="form-group col-md-6">
+                    <label for="salario">Preço</label>
+                    <input type="text" class="form-control" name="preco" data-mask="#.##0,00"
+                           data-mask-reverse="true"
+                           [value]="evento.preco" disabled/>
+                    <div class="invalid-feedback">
+
+                    </div>
+                </div>
+            </div>
+
+            
+            <input type="hidden" id="idevento"/>
+            <button type="submit" class="btn btn-primary btn-sm" (click)="deleteEvento()">Deletar</button>
+            <button class="btn btn-secondary btn-sm ml-2" (click)="cancelEvento()">
+                Cancelar
+            </button>
+        </form>
+    </div>
+</section>
+
+
+

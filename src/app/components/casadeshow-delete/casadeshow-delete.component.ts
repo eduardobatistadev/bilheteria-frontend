@@ -10,7 +10,7 @@ import { Casadeshow } from 'src/app/common/casadeshow';
 })
 export class CasadeshowDeleteComponent implements OnInit {
 
-  constructor(private casaDeShowService: CasadeshowService, private routter: Router, private route: ActivatedRoute) { }
+  constructor(private casaDeShowService: CasadeshowService, private router: Router, private route: ActivatedRoute) { }
 
   casadeshow: Casadeshow
 
@@ -24,13 +24,13 @@ export class CasadeshowDeleteComponent implements OnInit {
   deleteCasaDeShow(): void{
     this.casaDeShowService.delete(this.casadeshow.idcasashow).subscribe(() => {
       this.casaDeShowService.showMessage();
-      this.routter.navigate(['/casasdeshow']);
+      this.router.navigate(['/casasdeshow']);
     });
   
     }
 
   cancelCasaDeShow(): void{
-    this.routter.navigate(['/casasdeshow'])
+    this.router.navigate(['/casasdeshow'])
   }
 
 }

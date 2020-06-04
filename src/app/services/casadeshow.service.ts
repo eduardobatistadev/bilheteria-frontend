@@ -16,8 +16,8 @@ export class CasadeshowService {
     alert('Ação concluída com sucesso!');
   }  
 
-   create(casaDeShow: Casadeshow): Observable<Casadeshow>{
-     return this.http.post<Casadeshow>(this.baseUrl, casaDeShow)
+   create(casadeshow: Casadeshow): Observable<Casadeshow>{
+     return this.http.post<Casadeshow>(this.baseUrl, casadeshow)
    }
 
    read(): Observable<Casadeshow[]>{

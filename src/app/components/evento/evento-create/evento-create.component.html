@@ -64,8 +64,10 @@
 	                <div class="form-row">
 	                    <div class="form-group col-md-12">
 	                        <label for="evento">Casa de Show</label>
-	                        <select id="evento" class="form-control">
-	                            <option *ngFor="let tempCasaShow of casadeshow "  value="">{{casadeshow}}</option>
+	                        <select [(ngModel)]="evento.casadeshow.idcasashow" name="idc" id="evento" class="form-control">
+	                            <option *ngFor="let tempCasaShow of casadeshow" [value]="tempCasaShow.idcasashow">
+									{{tempCasaShow.nome}}
+								</option>
 	                        </select>
 	                        <div class="invalid-feedback">
 	

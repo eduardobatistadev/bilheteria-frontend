@@ -1,1 +1,109 @@
-<p>evento-update works!</p>
+
+	    <section class="layout-content">
+	
+	        <nav class="navbar navbar-expand-md bg-light">
+	            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	                <ul class="navbar-nav mr-auto">
+	                    <li class="nav-item active">
+	                        <i class="oi oi-caret-right"></i>
+	                        <span>Alterar Eventos</span>
+	                    </li>
+	                </ul>
+	                <a class="btn btn-primary btn-md" role="button">
+	                    <span class="oi oi-spreadsheet" title="Listar" aria-hidden="true"></span>
+	                    <span routerLink="/eventos">Listar Eventos</span>
+	                </a>
+	            </div>
+	        </nav>
+	
+	        <div class="container" id="cadastro">
+	        
+	        
+	            <form>
+                    <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="nome">Nome do Evento</label>
+	                        <input type="text" class="form-control" name="nome" placeholder="Evento"
+                                   autofocus="autofocus"
+                                   [(ngModel)]="evento.nome"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
+	                       <div class="form-group col-md-6">
+	                        <label for="nome">Descrição</label>
+	                        <input type="text" class="form-control" name="descricao" placeholder="descrição"
+                                   autofocus="autofocus"
+                                   [(ngModel)]="evento.descricao"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-6">
+	                        <label for="dataEntrada">Data início</label>
+                            <input type="date" class="form-control" name="dt_inicio"
+                            [(ngModel)]="evento.dt_inicio"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    <div class="form-group col-md-6">
+	                        <label for="dataSaida">Data final</label>
+                            <input type="date" class="form-control" name="dt_fim"
+                            [(ngModel)]="evento.dt_fim"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="form-row">
+	                    <div class="form-group col-md-12">
+	                        <label for="evento">Casa de Show</label>
+                            <select [(ngModel)]="evento.casadeshow.idcasashow" name="idc" id="evento" class="form-control">
+	                            <option *ngFor="let tempCasaShow of casashow" [value]="tempCasaShow.idcasashow">
+									{{tempCasaShow.nome}}
+								</option>
+	                        </select>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	                <div class="form-row">
+
+	                    <div class="form-group col-md-6">
+	                        <label for="numero">Quantidade de Ingressos</label>
+                            <input type="number" class="form-control" name="ingressos"
+                            [(ngModel)]="evento.ingressos"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                    
+	                    
+	                       <div class="form-group col-md-6">
+	                        <label for="salario">Preço</label>
+	                        <input type="text" class="form-control" name="preco" data-mask="#.##0,00"
+                                   data-mask-reverse="true"
+                                   [(ngModel)]="evento.preco"/>
+	                        <div class="invalid-feedback">
+	
+	                        </div>
+	                    </div>
+	                </div>
+	     
+	                <input type="hidden"/>
+                    <button type="submit" class="btn btn-primary btn-sm" (click)="updateEvento()">Atualizar</button>
+                    <button class="btn btn-secondary btn-sm ml-2" (click)="cancelEvento()">
+                        Cancelar
+                    </button>
+	            </form>
+	        </div>
+	    </section>
+
+

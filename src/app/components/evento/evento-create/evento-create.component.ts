@@ -13,22 +13,33 @@ import { CasadeshowComponent } from '../../casadeshow/casadeshow.component';
 })
 export class EventoCreateComponent implements OnInit {
 
-  casadeshow: Casadeshow [] = [];
+  casadeshow: Casadeshow[] = [
+    {
+      idcasashow: 1,
+      nome: 'Vila Mix',
+      endereco: 'Rua Fulano',
+      capacidade: 400
+    }
+  ];
 
   evento: Evento = {
     nome: 'Vila Mix',
     descricao: 'O Maior evento de todos',
     ingressos: 100,
     preco: 50,
-    casaDeShow: new Casadeshow
-
+    casadeshow: new Casadeshow
   }
   
   constructor(private casashowService: CasadeshowService,private eventoService: EventoService, private router: Router) { }
 
+
+
   ngOnInit(): void {
-    this.TodasCasaShows
+    this.TodasCasaShows();
+
   }
+
+
 
   createEvento(): void{
     this.eventoService.create(this.evento).subscribe(() => {
@@ -43,9 +54,10 @@ export class EventoCreateComponent implements OnInit {
     this.router.navigate(['/eventos'])
   }
 
-  TodasCasaShows(): void{
-    this.casashowService.read().subscribe(data => {
+ TodasCasaShows(): void{
+ this.casashowService.read().subscribe(data => {
       this.casadeshow = data;
+      console.log(data)
     });
   }
 

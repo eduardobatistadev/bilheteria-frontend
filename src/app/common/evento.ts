@@ -8,5 +8,5 @@ export class Evento {
     dt_fim?: Date;
     ingressos: number;
     preco: number;
-    casaDeShow?: Casadeshow;
+    casadeshow?: Casadeshow;
 }

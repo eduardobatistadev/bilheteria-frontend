@@ -1,1 +1,15 @@
-<p>detalhes-evento works!</p>
+   <body>
+        <div class="wrapper">
+          <div>
+            <h1 style="text-align: center;">Detalhes do Evento</h1>
+            <p>Id: {{evento.idevento}}</p>
+            <p>Evento: {{evento.nome}}<p>
+            <p>Descrição: {{evento.descricao}}</p>
+            <p>Ingressos Disponíveis: {{evento.ingressos}}</p>
+            <p>Data Início: {{evento.dt_inicio}}</p>
+            <p>Data Fim: {{evento.dt_fim}}</p>
+            <p>Preço: {{evento.preco | currency: 'BRL'}}</p>
+          </div>
+        </div>
+      </body>
+

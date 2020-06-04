@@ -11,6 +11,7 @@ import { CasadeshowUpdateComponent } from './components/casadeshow-update/casade
 import { CasadeshowDeleteComponent } from './components/casadeshow-delete/casadeshow-delete.component';
 import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
 import { EventoDeleteComponent } from './components/evento/evento-delete/evento-delete.component';
+import { DetalhesEventoComponent } from './components/detalhes-evento/detalhes-evento.component';
 
 const routes: Routes = [
     {
@@ -28,6 +29,10 @@ const routes: Routes = [
     {
     path: "eventos/update/:id",
     component: EventoUpdateComponent
+    },
+    {
+    path: "eventos/detalhes/:id",
+    component: DetalhesEventoComponent
     },
     {
     path: "eventos/delete/:id",
