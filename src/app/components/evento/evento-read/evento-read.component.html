@@ -1,0 +1,48 @@
+<section class="container" layout:fragment="corpo">
+    <nav class="navbar navbar-expand-md bg-light">
+    
+    </nav>
+    
+        <div class="table-responsive">
+        
+            <div th:replace="fragments/alert"></div>
+            <table class="table table-striped table-hover table-sm">
+                <thead>
+                <tr>
+              
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Casa Show</th>
+                    <th>Descrição</th>
+                    <th>Ingressos</th>
+                    <th>Data Inicial</th>
+                    <th>Data Final</th>
+                    <th>Preço</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let tempEventos of evento">
+                    <td>{{tempEventos.idevento}}</td>
+                    <td>{{tempEventos.nome}}</td>
+                    <td>{{tempEventos.casaDeShow}}</td>
+                    <td>{{tempEventos.descricao}}</td>
+                    <td>{{tempEventos.ingressos}}</td>
+                    <td>{{tempEventos.dt_inicio}}</td>
+                    <td>{{tempEventos.dt_fim}}</td>
+                    <td>{{tempEventos.preco}}</td>
+                    
+
+                    <td colspan="2">
+                        <a class="btn btn-info btn-sm"  role="button">
+                            <span class="oi oi-brush" title="Editar" aria-hidden="true">Update</span>
+                        </a>
+                        <button type="button" class="btn btn-danger btn-sm ml-2"
+                                data-toggle="modal" data-target="#myModal">
+                            <span class="oi oi-circle-x" title="Excluir" aria-hidden="true">Delete</span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+</section>	

@@ -1,0 +1,26 @@
+
+			
+	<section class="layout-content">
+	
+	
+		<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 style="text-align: center" class="display-4">Ingresso Show</h1>
+    <p style="text-align: center" class="lead">Conheça os shows mais esperados do ano !!</p>
+  </div>
+</div>
+
+	<div class="row container fluid justify-content-center mx-auto">
+		<div *ngFor="let tempEventos of evento" style="margin: auto" class="card col-lg-5 mb-5">
+					<div class="card-body">
+						<h4 class="card-title">{{tempEventos.nome}}</h4>
+						<p class="card-text">{{tempEventos.descricao}}</p>
+						<div class="row">
+						<p class="card-text">&nbsp;&nbsp;&nbsp;Ingressos Disponiveis:&nbsp; </p>
+						<p class="card-text">{{tempEventos.ingressos}}.</p>
+						</div>
+						<a class="btn btn-primary">Detalhes</a>
+					</div>
+		</div>
+		</div>
+	</section>		

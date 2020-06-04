@@ -1,0 +1,59 @@
+
+	    <section class="layout-content">
+	
+	        <nav class="navbar navbar-expand-md bg-light">
+	            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+	                <ul class="navbar-nav mr-auto">
+	                    <li class="nav-item active">
+	                        <i class="oi oi-caret-right"></i>
+	                        <span>Alterar Casa de Show</span>
+	                    </li>
+	                </ul>
+	                <a class="btn btn-primary btn-md" role="button">
+	                    <span class="oi oi-spreadsheet" title="Listar" aria-hidden="true"></span>
+	                    <span routerLink="/casasdeshow">Listar Casas de Show</span>
+	                </a>
+	            </div>
+	        </nav>
+	
+	        <div class="container" id="cadastro">
+	        
+	        
+	            <form>
+	                
+	                <div class="form-row">
+	                    <div class="form-group col-lg-4">
+	                    
+	       
+	                    
+	                        <label for="nome">Casa de Show</label>
+	                        <input type="text" class="form-control" name="nome"
+                                   placeholder="Nome Casa de Show" autofocus="autofocus"
+                                    [(ngModel)]="casadeshow.nome"/>
+	                   </div>       
+	                        
+	                        <div class="form-group col-lg-4">       
+	                        <label for="nome">Endereço</label>
+	                        <input type="text" class="form-control" name="endereco"
+                                   placeholder="Digite seu endereço" autofocus="autofocus"
+                                   [(ngModel)]="casadeshow.endereco" />
+	                               
+	                         </div>
+	                         
+	                           <div class="form-group col-lg-4">       
+	                        <label for="nome">Capacidade</label>
+	                        <input type="number" class="form-control" name="capacidade"
+                                   placeholder="Digite sua capacidade" autofocus="autofocus"
+                                   [(ngModel)]="casadeshow.capacidade" />
+	                         </div>
+	                   
+	                </div>
+	                <input type="hidden" id="idcasashow"/>
+                    <button type="submit" class="btn btn-primary btn-sm" (click)="updateCasaDeShow()">Salvar</button>
+                    <button class="btn btn-secondary btn-sm ml-2" (click)="cancelCasaDeShow()">
+                        Cancelar
+                    </button>
+	            </form>
+	        </div>
+	    </section>
+
