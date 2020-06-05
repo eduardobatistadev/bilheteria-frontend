@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { EventoService } from 'src/app/services/evento.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Evento } from 'src/app/common/evento';
+import { CartItem } from 'src/app/common/cart-item';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-detalhes-evento',
@@ -10,7 +12,7 @@ import { Evento } from 'src/app/common/evento';
 })
 export class DetalhesEventoComponent implements OnInit {
 
-  constructor(private eventoService: EventoService, private routter: Router, private route: ActivatedRoute) { }
+  constructor(private cartService: CartService,private eventoService: EventoService, private routter: Router, private route: ActivatedRoute) { }
 
   evento: Evento
   event: Evento[] = [];
@@ -24,5 +26,9 @@ export class DetalhesEventoComponent implements OnInit {
 
   addToCart(theEvent: Evento){
     console.log(`Adicionar ao Carrinho: ${theEvent.nome}, ${theEvent.preco}`);
+
+    const theCartItem = new CartItem(theEvent);
+
+    this.cartService.addToCart(theCartItem);
   }
 }
