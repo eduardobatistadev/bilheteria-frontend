@@ -1,6 +1,7 @@
 
 @import '~font-awesome/css/font-awesome.min.css';
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
 
 /*
  * Base structure
@@ -122,3 +123,37 @@ body {
 	color: #777777;
 	text-align: center;
 }
+
+
+
+.cart-area i{
+    font-size:22px;
+    float:left;
+    margin-top:16px;
+    color:#fff;
+    margin-left:15px
+}
+
+
+.total{
+    background:#41494d;
+    line-height:43px;
+    color:#fff;
+    border-radius:30px;
+    border:1px solid #ffffff;
+    float:left;
+    margin-top:7px;
+    padding-left:17px;
+   
+}
+
+.total span{
+    display:inline-block;
+    background:#fff;
+    padding:0 13px;
+    color:#000;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    margin-left:11px;
+}
+

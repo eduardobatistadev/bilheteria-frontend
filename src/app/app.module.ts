@@ -23,6 +23,7 @@ import { CasadeshowUpdateComponent } from './components/casadeshow-update/casade
 import { CasadeshowDeleteComponent } from './components/casadeshow-delete/casadeshow-delete.component';
 import { EventoReadComponent } from './components/evento/evento-read/evento-read.component';
 import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { EventoUpdateComponent } from './components/evento/evento-update/evento-
     CasadeshowUpdateComponent,
     CasadeshowDeleteComponent,
     EventoReadComponent,
-    EventoUpdateComponent
+    EventoUpdateComponent,
+    CartStatusComponent
   ],
   imports: [
     BrowserModule,
