@@ -23,7 +23,28 @@
                     </td>
                     <td>
                         <div class="items">
-                            <label>Quantidade:</label> {{tempCartItem.quantidade}}
+                            <label>Quantidade:</label>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button class="btn btn-secondary btn-sm">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+
+                                <div class="col ml-4 mr-2">
+                                    {{tempCartItem.quantidade}}
+                                </div>
+
+                                <div class="col">
+                                    <button class="btn btn-secondary btn-sm">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+
+                                <div class="col-8"></div>
+
+                            </div>
+
                         </div>
                         <p class="mt-2">Subtotal: {{tempCartItem.quantidade*tempCartItem.preco | currency: 'BRL'}}</p>
                     </td>
