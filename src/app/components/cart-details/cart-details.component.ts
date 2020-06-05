@@ -9,7 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartDetailsComponent implements OnInit {
 
-  carItems: CartItem[] = [];
+  cartItems: CartItem[] = [];
   totalPrice: number = 0;
   totalQuantity: number = 0;
 
@@ -19,7 +19,7 @@ export class CartDetailsComponent implements OnInit {
     this.listCartDetails();
   }
   listCartDetails() {
-    this.carItems = this.cartService.cartItems;
+    this.cartItems = this.cartService.cartItems;
 
     this.cartService.totalPrice.subscribe(
       data => this.totalPrice = data

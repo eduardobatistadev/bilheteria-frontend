@@ -3,9 +3,31 @@
         <div class="container-fluid">
             <table class="table table-bordered">
                 <tr>
-                    <th width="60%">Detalhes do Evento</th>
-                    <th width="40%"></th>
+                    <th width="20%">Id</th>
+                    <th width="40%">Detalhes do Evento</th>
+                    <th width="30%"></th>
                 </tr>
+
+                <tr *ngFor="let tempCartItem of cartItems">
+                    <td>
+                        <p>{{tempCartItem.id}}</p>
+                    </td>
+                    <td>
+                        <p>{{tempCartItem.nome}}</p>
+                        <p>{{tempCartItem.preco | currency: 'BRL'}}</p>
+                    </td>
+                    <td>
+                        <div class="items">
+                            <label>Quantidade:</label> {{tempCartItem.quantidade}}
+                        </div>
+                        <p class="mt-2">Subtotal: {{tempCartItem.quantidade*tempCartItem.preco | currency: 'BRL'}}</p>
+                    </td>
+                    
+                   
+
+                </tr>
+
+
             </table>
         </div>
     </div>
