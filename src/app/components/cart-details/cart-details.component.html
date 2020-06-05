@@ -22,11 +22,16 @@
                         </div>
                         <p class="mt-2">Subtotal: {{tempCartItem.quantidade*tempCartItem.preco | currency: 'BRL'}}</p>
                     </td>
-                    
-                   
-
                 </tr>
 
+                <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold">
+                        <p>Quantidade Total: {{totalQuantity}}</p>
+                        <p>Frete: Não há</p>
+                        <p>Preço total: {{totalPrice | currency: 'BRL'}}</p>
+                    </td>
+                </tr>
 
             </table>
         </div>
