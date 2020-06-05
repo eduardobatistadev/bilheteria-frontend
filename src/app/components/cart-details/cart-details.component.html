@@ -1,6 +1,11 @@
 <div class="main-content container">
     <div class="section-content section-content-p30">
         <div class="container-fluid">
+
+            <div *ngIf="cartItems.length > 0">
+
+           
+
             <table class="table table-bordered">
                 <tr>
                     <th width="20%">Id</th>
@@ -34,6 +39,12 @@
                 </tr>
 
             </table>
+         </div>
+
+         <div *ngIf="cartItems.length == 0" class="alert alert-warning col-md-12" role="alert">
+             Seu Carrinho está Vazio!
+         </div>
+
         </div>
     </div>
 </div>
