@@ -24,6 +24,7 @@ import { CasadeshowDeleteComponent } from './components/casadeshow-delete/casade
 import { EventoReadComponent } from './components/evento/evento-read/evento-read.component';
 import { EventoUpdateComponent } from './components/evento/evento-update/evento-update.component';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
     CasadeshowDeleteComponent,
     EventoReadComponent,
     EventoUpdateComponent,
-    CartStatusComponent
+    CartStatusComponent,
+    CartDetailsComponent
   ],
   imports: [
     BrowserModule,
