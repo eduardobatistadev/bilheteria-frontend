@@ -124,7 +124,27 @@ body {
 	text-align: center;
 }
 
+.table{
+    margin:0
+}
 
+table.table.table-bordered{
+    border:1px solid #ccc;
+    background:#fff
+}
+.table-bordered td,.table-bordered th{
+    border:1px solid #dee2e6
+}
+table.table.table-bordered th{
+    BACKGROUND:#53585a;
+    color:#fff;
+    font-size:14px;
+    padding:7px
+}
+.main-content{
+    padding-top:116px;
+    min-height:100vh;
+}
 
 .cart-area i{
     font-size:22px;
