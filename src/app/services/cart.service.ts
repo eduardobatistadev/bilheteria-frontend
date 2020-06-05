@@ -67,4 +67,8 @@ export class CartService {
     console.log('------');
   }
 
+  decrementQuantity(theCartItem: CartItem){
+    theCartItem.quantidade--;
+  }
+
 }
