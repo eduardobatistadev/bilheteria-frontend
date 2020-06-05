@@ -13,11 +13,16 @@ export class DetalhesEventoComponent implements OnInit {
   constructor(private eventoService: EventoService, private routter: Router, private route: ActivatedRoute) { }
 
   evento: Evento
+  event: Evento[] = [];
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.eventoService.readById(id).subscribe(evento =>{
       this.evento = evento
     })
+  }
+
+  addToCart(theEvent: Evento){
+    console.log(`Adicionar ao Carrinho: ${theEvent.nome}, ${theEvent.preco}`);
   }
 }

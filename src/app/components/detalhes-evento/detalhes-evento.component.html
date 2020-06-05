@@ -9,7 +9,10 @@
             <p>Data Início: {{evento.dt_inicio}}</p>
             <p>Data Fim: {{evento.dt_fim}}</p>
             <p>Preço: {{evento.preco | currency: 'BRL'}}</p>
-            <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+
+           
+            <button (click)="addToCart(evento)" class="btn btn-primary btn-sm">Adicionar ao Carrinho</button>
+          
           </div>
         </div>
       </body>
