@@ -16,9 +16,17 @@ export class EventoUpdateComponent implements OnInit {
   constructor(private eventoService: EventoService, private casaDeShowService: CasadeshowService ,private routter: Router, private route: ActivatedRoute) { }
 
   evento: Evento
-  casashow: Casadeshow[];
+  casashow: Casadeshow[] = [
+    {
+      idcasashow: 0,
+      nome: 'Não Foi Possivel Retornar Os Dados Do Banco',
+      endereco: '',
+      capacidade: 0
+    }
+  ];
 
   ngOnInit(): void {
+    this.TodasCasaShows();
     const id = this.route.snapshot.paramMap.get('id')
     this.eventoService.readById(id).subscribe(evento => {
       this.evento = evento

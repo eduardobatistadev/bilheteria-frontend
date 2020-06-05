@@ -61,18 +61,12 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-12">
-                    <label for="evento">Casa de Show</label>
-                    <select [value]="evento.casadeshow.idcasashow" name="idc" id="evento" class="form-control">
-                        <option *ngFor="let tempCasaShow of evento" [value]="tempCasaShow.casadeshow.idcasashow">
-                            {{tempCasaShow.casadeshow.nome}}
-                        </option>
-                    </select>
-                    <div class="invalid-feedback">
 
-                    </div>
+                <div class="form-group col-md-12">
+                    <label for="casadeshow">Casa De Show</label>
+                    <input type="text" class="form-control" name="casadeshow"
+                    [value]="evento.casadeshow.nome" disabled/>
                 </div>
-                
             </div>
             <div class="form-row">
 

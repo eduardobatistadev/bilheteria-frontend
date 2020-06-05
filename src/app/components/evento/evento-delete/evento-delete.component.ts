@@ -18,7 +18,8 @@ export class EventoDeleteComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.eventoService.readById(id).subscribe(evento =>{
       this.evento = evento
-    })
+      console.log(this.evento)
+    });
   }
 
   deleteEvento(): void{
